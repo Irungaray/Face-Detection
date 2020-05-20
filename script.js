@@ -7,3 +7,5 @@ function startVideo() {
         err => console.log(error)
     )
 }
+
+startVideo()

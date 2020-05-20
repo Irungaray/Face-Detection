@@ -4,7 +4,7 @@ function startVideo() {
     navigator.getUserMedia(
         { video: {} },
         stream => video.srcObject = stream,
-        err => console.log(error)
+        err => console.error(err)
     )
 }
 

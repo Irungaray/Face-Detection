@@ -1,10 +1,12 @@
 const video = document.getElementById('video')
 
+const WEIGHTS_URL = "http://localhost:8080/";
+
 Promise.all([
-    faceapi.nets.tinyFaceDetector.loadFromUri('/models'),
-    faceapi.nets.faceLandmark68Net.loadFromUri('/models'),
-    faceapi.nets.faceRecognitionNet.loadFromUri('/models'),
-    faceapi.nets.faceExpressionNet.loadFromUri('/models')
+    faceapi.nets.tinyFaceDetector.loadFromUri(WEIGHTS_URL),
+    faceapi.nets.faceLandmark68Net.loadFromUri(WEIGHTS_URL),
+    faceapi.nets.faceRecognitionNet.loadFromUri(WEIGHTS_URL),
+    faceapi.nets.faceExpressionNet.loadFromUri(WEIGHTS_URL)
 ]).then(startVideo)
 
 function startVideo() {
